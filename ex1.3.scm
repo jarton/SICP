@@ -1,0 +1,6 @@
+(define (func x y z) 
+  (define (square x) (* x x))
+   (define (sum-square x y) (+ (square x) (square y)))
+   (cond ((and (>= x y) (>= z y)) (sum-square z x)) 
+   		 ((and (>= y x) (>= z x)) (sum-square y z))	
+   		 ((and (>= y z) (>= x z)) (sum-square x y))))
